@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="BoatSearchFormController">
+  <!-- <aura:registerEvent name="launchNewBoatForm" type="c:launchNewBoatForm"/> -->
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <!-- <aura:handler name="launchNewBoatForm" event="c:launchNewBoatForm" action="{!c.handleNewBoatForm}"/> -->
+  <aura:attribute name="boatTypes" type="BoatType__c" default="[]"/>
+  <aura:attribute name="selectedType" type="String" default=""/>
+  <aura:attribute name="renderNew" type="Boolean" default="true"/>
+
+  <article class="slds-card">
+    <header class="slds-card__header slds-grid">
+      <h2>
+        <span class="slds-text-heading_sm all">Find a Boat</span>
+      </h2>
+    </header>
+    <div class="slds-card__body slds-card__body_inner">
+      <lightning:layout horizontalAlign="center">
+        <div class="input-sel-wrapper slds-m-right_medium">
+          <lightning:select aura:id="boatTypes" label="" name="selectType" onchange="{!c.clickTypeSelect}">
+            <option value="">All Types</option>
+            <aura:iteration items="{!v.boatTypes}" var="boat">
+              <option value="{!boat.Id}" text="{!boat.Name}"></option>
+            </aura:iteration>
+          </lightning:select>
+        </div>
+        <lightning:layoutItem flexibility="auto" class="slds-m-right_x-small">
+          <lightning:button variant="brand" label="Search" onclick="{! c.clickSearchBoats }"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto">
+          <aura:if isTrue="{!v.renderNew}">
+            <lightning:button variant="neutral" label="New" onclick="{! c.clickNewBoat }"/>
+          </aura:if>
+        </lightning:layoutItem>
+      </lightning:layout>
+    </div>
+  </article>
+</aura:component>

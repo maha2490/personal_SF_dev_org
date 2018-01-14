@@ -1,0 +1,12 @@
+<apex:page sidebar="false" showHeader="true">
+    <h1>Hello world</h1>
+    
+    <apex:pageBlock title="A Block Title"> 
+    	<apex:pageBlockSection title="A Section Title">I'm three components deep :) </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Another Section Title">hey girl </apex:pageBlockSection>
+    </apex:pageBlock>
+    <p>
+        This is my first VF page!
+    </p>
+</apex:page>

@@ -1,0 +1,18 @@
+{
+    "projectName": "Development org",
+    "username": "rachel.mahan@rtslabs.com",
+    "id": "c21dbf00-6bed-11e7-9436-e51cf0413aaa",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://rachel-mahan-dev-ed.my.salesforce.com",
+    "workspace": "/Users/rachelmahan/Documents/development/SF",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

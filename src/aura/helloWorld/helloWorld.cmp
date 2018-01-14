@@ -1,0 +1,10 @@
+<aura:component >
+    <c:helloHeading />
+	<p>Hello Lightning!</p>
+	
+    <aura:attribute name="message" type="String"/>
+
+    <p><ui:outputText value="{!'Hello! ' + v.message}"/></p>
+
+
+</aura:component>
