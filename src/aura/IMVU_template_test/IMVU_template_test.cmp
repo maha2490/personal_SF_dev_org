@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:themeLayout" access="global">
+  <aura:attribute name="search" type="Aura.Component[]" required="false" />
+  <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
+  <div>
+    <div class="searchRegion">
+      {!v.search}
+    </div>
+    <div class="navigation">
+        {!v.navBar}
+    </div>
+    <div class="mainContentArea">
+        {!v.body}
+    </div>
+  </div>
+</aura:component>

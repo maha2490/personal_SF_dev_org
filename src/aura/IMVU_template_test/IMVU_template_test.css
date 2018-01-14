@@ -1,0 +1,45 @@
+/*branding theme overrides font, use custom upload instead*/
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+.THIS {
+  font-family: 'Arimo', sans-serif;
+}
+
+.THIS .searchRegion {
+  height: 350px;
+  background: #cae5e2;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.THIS .searchRegion .ui-widget {
+  width: 630px;
+}
+
+.THIS .navigation ul.comm-navigation__list {
+  justify-content: space-around;
+}
+.THIS .navigation .slds-list__item a,
+.THIS .navigation .slds-list__item button {
+  font-size: 12px;
+  font-weight: 500;
+  height: 50px;
+  padding: 16px  14px;
+  cursor: pointer;
+}
+.THIS .navigation .slds-list__item a:hover,
+.THIS .navigation .slds-list__item button:hover {
+    background-color: white;
+}
+
+.THIS .navigation .slds-list__item a.slds-is-active:not([data-type="home"]){
+  color: #deb359;
+  background-color: white;
+  border-bottom: 2px solid #deb359;
+}
+
+.THIS .mainContentArea {
+  background: #f8f8f8;
+}
