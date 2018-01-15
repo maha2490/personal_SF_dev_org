@@ -1,10 +1,21 @@
 <aura:component implements="forceCommunity:themeLayout" access="global">
+  <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
   <aura:attribute name="search" type="Aura.Component[]" required="false" />
   <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
   <div>
-    <div class="searchRegion">
-      {!v.search}
-    </div>
+    <header class="help-header">
+      <div class="upper-button-wrapper slds-p-around_medium">
+        <div id="logo">
+            <img src='{!$Resource.imvu_comm_logo_adj}'/>
+        </div>
+        <div id="profile_menu" class="slds-float_right">
+          {!v.profileMenu}
+        </div>
+      </div>
+      <div class="searchRegion" style="{! 'background-image: ' + 'url(' + $Resource.help_header_bg_full + ');'}">
+      	{!v.search}
+      </div>
+    </header>
     <div class="navigation">
         {!v.navBar}
     </div>
